@@ -4,16 +4,16 @@ import "./App.css";
 // React
 
 // Copenents
-
-// Pages
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 const App = () => {
   return (
-    <div>
-      <Login />
-    </div>
+    <>
+      <Sidebar>
+        <h1>oi</h1>
+        <p>oii</p>
+      </Sidebar>
+    </>
   );
 };
 

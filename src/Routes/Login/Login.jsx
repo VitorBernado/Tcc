@@ -1,7 +1,7 @@
 // React
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 // CSS
 import "./Login.css";
 
@@ -40,9 +40,9 @@ const Login = () => {
         <BtnFacebook />
         <BtnGoogle />
       </div>
-      <a href="#" className="register">
+      <Link to="/Register" className="register">
         Não tem um conta? <span>Inscreva-se</span>
-      </a>
+      </Link>
     </div>
   );
 };
