@@ -33,18 +33,19 @@ const Sidebar = () => {
         className={isActiveMenu ? "container-menu-active" : "container-menu"}
       >
         <div className="avatar">
-          <Avatar image={userImg} name={"Thifany"} />
+          <Avatar
+            image={userImg}
+            name={"Thifany"}
+            width="115px"
+            height="115px"
+          />
         </div>
         <ul className="list-menu">
           <li>
-            <ListButton router={"/Register"} icon={<GoHome />} title={"Home"} />
+            <ListButton router={"/"} icon={<GoHome />} title={"Home"} />
           </li>
           <li>
-            <ListButton
-              router={"/Register"}
-              icon={<BiUser />}
-              title={"Conta"}
-            />
+            <ListButton router={"/Account"} icon={<BiUser />} title={"Conta"} />
           </li>
           <li>
             <ListButton

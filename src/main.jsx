@@ -7,11 +7,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Peges
 import Login from "./Routes/Login/Login.jsx";
 import Register from "./Routes/Register/Register.jsx";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Home from "./Routes/Home/Home";
+import Account from "./Routes/Account/Account";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "Login",
     element: <Login />,
   },
   {
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "Sidebar",
-    element: <Sidebar />,
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "Account",
+    element: <Account />,
   },
 ]);
 

@@ -2,7 +2,7 @@
     width: 17em;
     height: 100vh;
     display: flex;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: #242424;
     flex-direction: column;
 }
 
@@ -17,7 +17,7 @@
 
 .icon-container  {
     font-size: 2em;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: #242424;
 }
 
 .icon-menu {
@@ -32,7 +32,7 @@
         left: 0;
         width: 100vw;
         height: 92vh;
-        background-color: rgba(0, 0, 0, .25);
+        background-color: #242424;
         transform: translateX(-100%);
         transition: .3s;
     }
@@ -42,7 +42,7 @@
         left: 0;
         width: 100vw;
         height: 92vh;
-        background-color: rgba(0, 0, 0, .25);
+        background-color: #242424;
         transform: translateX(0);
         transition: .3s;
     }

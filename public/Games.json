@@ -1,0 +1,71 @@
+[
+    {
+        "id": "1",
+        "name": "jogo da memoria",
+        "link": "https://rachacuca.com.br/passatempos/jogo-da-memoria/",
+        "img" : "./GameIcon/jogo_da_memoria.png"
+    },
+
+    {
+        "id": "2",
+        "name": "jogo da forca",
+        "link": "https://rachacuca.com.br/palavras/jogo-da-forca/",
+        "img" : "./GameIcon/carrasco.png"
+    },
+    {
+        "id": "3",
+        "name": "sudoku",
+        "link": "https://www.geniol.com.br/logica/sudoku/",
+        "img" : "./GameIcon/sudoku.png"
+    },
+    {
+        "id": "4",
+        "name": "xadrez",
+        "link": "https://www.chess.com/pt-BR/play/computer",
+        "img" : "./GameIcon/xadrez.png"
+    },
+    {
+        "id": "5",
+        "name": "jogo de damas",
+        "link": "https://www.geniol.com.br/logica/sudoku/",
+        "img" : "./GameIcon/jogo-de-damas.png"
+    },
+    {
+        "id": "6",
+        "name": "Imaginação",
+        "link": "https://gartic.com.br/",
+        "img" : "./GameIcon/imagem_acao.jpeg"
+    },
+    {
+        "id": "1",
+        "name": "jogo da memoria",
+        "link": "https://rachacuca.com.br/passatempos/jogo-da-memoria/",
+        "img" : "./GameIcon/jogo_da_memoria.png"
+    },
+
+    {
+        "id": "2",
+        "name": "jogo da forca",
+        "link": "https://rachacuca.com.br/palavras/jogo-da-forca/",
+        "img" : "./GameIcon/carrasco.png"
+    },
+    {
+        "id": "3",
+        "name": "sudoku",
+        "link": "https://www.geniol.com.br/logica/sudoku/",
+        "img" : "./GameIcon/sudoku.png"
+    },
+    {
+        "id": "4",
+        "name": "xadrez",
+        "link": "https://www.chess.com/pt-BR/play/computer",
+        "img" : "./GameIcon/xadrez.png"
+    },
+    {
+        "id": "5",
+        "name": "jogo de damas",
+        "link": "https://www.geniol.com.br/logica/sudoku/",
+        "img" : "./GameIcon/jogo-de-damas.png"
+    }
+
+]
