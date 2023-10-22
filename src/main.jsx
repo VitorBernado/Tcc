@@ -9,6 +9,9 @@ import Login from "./Routes/Login/Login.jsx";
 import Register from "./Routes/Register/Register.jsx";
 import Home from "./Routes/Home/Home";
 import Account from "./Routes/Account/Account";
+import Game from "./Routes/SecretWord/Game";
+import StartGame from "./Routes/SecretWord/StartGame";
+import GameOver from "./Routes/SecretWord/GameOver";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
   {
     path: "Account",
     element: <Account />,
+  },
+  {
+    path: "SecretWord",
+    element: <StartGame />,
+  },
+  {
+    path: "Game",
+    element: <Game />,
+  },
+  {
+    path: "GameOver",
+    element: <GameOver />,
   },
 ]);
 
