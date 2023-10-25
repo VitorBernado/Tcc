@@ -52,7 +52,7 @@ const Sidebar = () => {
           </li>
           <li>
             <ListButton
-              router={"/Register"}
+              router={""}
               icon={<PiUsersThree />}
               title={"Comunidade"}
             />
