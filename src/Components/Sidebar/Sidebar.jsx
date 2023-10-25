@@ -48,11 +48,7 @@ const Sidebar = () => {
             <ListButton router={"/Account"} icon={<BiUser />} title={"Conta"} />
           </li>
           <li>
-            <ListButton
-              router={"/Register"}
-              icon={<GoTrophy />}
-              title={"Ranking"}
-            />
+            <ListButton router={""} icon={<GoTrophy />} title={"Ranking"} />
           </li>
           <li>
             <ListButton
@@ -63,17 +59,13 @@ const Sidebar = () => {
           </li>
           <li>
             <ListButton
-              router={"/Register"}
+              router={""}
               icon={<SlSettings />}
               title={"Configuração"}
             />
           </li>
           <li>
-            <ListButton
-              router={"/Register"}
-              icon={<MdLogout />}
-              title={"Logout"}
-            />
+            <ListButton router={""} icon={<MdLogout />} title={"Logout"} />
           </li>
         </ul>
       </nav>

@@ -18,8 +18,8 @@ const Game = () => {
 
   const [guessedLetteres, setGussedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [guesses, setGuessses] = useState(3);
-  const [score, setScore] = useState(0);
+  const [guesses, setGuessses] = useState(5);
+  const [score, setScore] = useState(-200);
 
   const pickWordAndCategory = useCallback(() => {
     const categories = Object.keys(words);
@@ -34,6 +34,7 @@ const Game = () => {
 
   const startGame = useCallback(() => {
     clearLettersStates();
+    setGuessses(5);
 
     const { word, category } = pickWordAndCategory();
 
@@ -76,7 +77,7 @@ const Game = () => {
   };
 
   useEffect(() => {
-    if (guesses <= 0) {
+    if (guesses < 0) {
       clearLettersStates();
       history("/GameOver");
       handleSaveData();

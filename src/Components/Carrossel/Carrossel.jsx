@@ -5,6 +5,7 @@ import "./Carrossel.css";
 
 // Components
 import { MdOutlineArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Carrossel = ({ data, title }) => {
   const carousel = useRef(null);
@@ -35,14 +36,14 @@ const Carrossel = ({ data, title }) => {
         {data.map((item) => {
           const { id, name, link, img } = item;
           return (
-            <a href={link} className="item" key={id}>
+            <Link to={link} className="item" key={id}>
               <div className="img">
                 <img src={img} alt={name} />
               </div>
               <div className="title">
                 <span>{name}</span>
               </div>
-            </a>
+            </Link>
           );
         })}
       </div>
