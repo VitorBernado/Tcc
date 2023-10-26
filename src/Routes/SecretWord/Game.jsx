@@ -18,7 +18,7 @@ const Game = () => {
 
   const [guessedLetteres, setGussedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [guesses, setGuessses] = useState(5);
+  const [guesses, setGuessses] = useState(3);
   const [score, setScore] = useState(-200);
 
   const pickWordAndCategory = useCallback(() => {
@@ -34,7 +34,7 @@ const Game = () => {
 
   const startGame = useCallback(() => {
     clearLettersStates();
-    setGuessses(5);
+    setGuessses(3);
 
     const { word, category } = pickWordAndCategory();
 
