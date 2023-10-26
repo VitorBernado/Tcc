@@ -77,7 +77,7 @@ const Game = () => {
   };
 
   useEffect(() => {
-    if (guesses < 0) {
+    if (guesses <= 0) {
       clearLettersStates();
       history("/GameOver");
       handleSaveData();
