@@ -12,6 +12,7 @@ import Account from "./Routes/Account/Account";
 import Game from "./Routes/SecretWord/Game";
 import StartGame from "./Routes/SecretWord/StartGame";
 import GameOver from "./Routes/SecretWord/GameOver";
+import Community from "./Routes/Community/Community";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home />,
+    element: <Community />,
   },
   {
     path: "Account",
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "GameOver",
     element: <GameOver />,
+  },
+  {
+    path: "Jogos",
+    element: <Home />,
   },
 ]);
 

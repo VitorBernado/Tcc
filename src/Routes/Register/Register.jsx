@@ -1,6 +1,6 @@
 // React
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 // CSS
 import "./Register.css";
@@ -9,22 +9,91 @@ import "./Register.css";
 import ImagenPerfil from "../../Components/ImagenPerfil/ImagenPerfil";
 
 const Register = () => {
-  const [showPassword, setShowPassword] = useState(false); // Inicie showPassword como um booleano
+  const [showPassword, setShowPassword] = useState(false);
+  const checkboxRef = useRef();
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    telefone: "",
+    senha: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (checkboxRef.current.checked) {
+      // Aqui você pode fazer a solicitação para a API
+      // Certifique-se de substituir 'sua_api_endpoint' pela URL da sua APIo
+      fetch(" http://localhost:8080/Register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          // Manipule a resposta da API aqui
+          if (response.ok) {
+            window.location.href = "/Login";
+            // O envio foi bem-sucedido
+            // Você pode redirecionar o usuário ou fazer outra ação aqui
+          } else {
+            // Trate os erros da API
+            console.error("Erro ao enviar o formulário");
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar o formulário:", error);
+        });
+    } else {
+      console.error("Algo de errado");
+    }
+  };
+
   return (
-    <div className="container">
+    <form className="container" onSubmit={handleSubmit}>
       <ImagenPerfil />
-      <input placeholder="Nome" />
-      <input placeholder="E-mail" />
-      <input placeholder="Telefone" />
+
+      <input
+        type="text"
+        name="nome"
+        placeholder="Nome"
+        value={formData.nome}
+        onChange={handleInputChange}
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="E-mail"
+        value={formData.email}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="telefone"
+        placeholder="Telefone"
+        value={formData.telefone}
+        onChange={handleInputChange}
+      />
       <div className="container-password">
         <input
-          placeholder="Senha"
           type={showPassword ? "text" : "password"}
+          name="senha"
+          placeholder="Senha"
+          value={formData.senha}
+          onChange={handleInputChange}
           className="password"
         />
         <button className="eye" onClick={togglePasswordVisibility}>
@@ -33,7 +102,12 @@ const Register = () => {
       </div>
       <div className="container-termos">
         <label className="checkbox-container">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="aceitarTermos"
+            ref={checkboxRef}
+            onChange={handleInputChange}
+          />
           <span className="checkmark"></span>
           <p>
             Eu aceito os <span>Termos de uso</span> e{" "}
@@ -41,8 +115,10 @@ const Register = () => {
           </p>
         </label>
       </div>
-      <button>Inscreva-se</button>
-    </div>
+      <button type="submit" onSubmit={handleSubmit}>
+        Inscreva-se
+      </button>
+    </form>
   );
 };
 

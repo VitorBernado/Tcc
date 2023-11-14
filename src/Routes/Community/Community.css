@@ -1,51 +1,129 @@
+
+
 .video-container {
-  padding-top: 15%;
-  margin: 0 auto;
+  margin: 20px;
   text-align: center;
   align-items: center;
-
 }
 .img-community {
-  padding-top: 45px;
+  margin: 30px;
   text-align: center;
   align-items: center;
-  width:  800px;
-  margin: 0 auto;
+}
+.img-container{
+  align-items: justify;
+  margin: 30px;
+  height: 300px;
+  width: 250px;
 }
 
+.btn-community{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
 
-.h1-title{
-  padding-top: 30px;
-  text-align: center;
-  font-size: 60px;
 }
-.p {
-  padding: 10px;
+.community-container{
+  background: url('./fundo.png');
+  filter: grayscale(70%);
+  background-size: 100vw ;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  padding: 40px; 
+
+}
+
+.community-header{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.community-header-img{
+  margin-top: 30px;
+  margin-left: 5%;
+
+}
+.community-header-title{
+  margin-left: 20%; 
+  font-size: 30px;
+}
+.community-header , .paragrafo-community {
+  margin: 0;
+  padding: 0;
+}
+.paragrafo-community {
+  margin-top: 30px;
   font-size: 30px;
   text-align: justify;
-  margin: 100px;
+  margin-left: 40px ;
+  margin-inline:40px;
+  border: none;
 }
-.container-community{
+.paragrafo-community-header{
+  font-size: 30px;
+  text-align: justify;
+  margin-left: 40px ;
+  margin-inline:40px;
+}
+.paragrafo-community-text {
+  font-size: 25px;
+  text-align: justify;
+  margin: 15px;
+}
 
-    width: 100%; 
-    height: auto; 
-    opacity: 0.7; 
-  
-  
-}
-.div{
-  padding-top: 45px;
-  padding: 40px;
-  background-color: white;
-}
-.paragrafo{
-  color: black;
-}
-main.card{
+
+.div-community {
+  margin-top: 15PX;
   display: flex;
-  pad: 32px;
+  justify-content: center; 
+  margin-left:80px;
+  margin-right: 90px;
 }
-main.card{
-  width: 64px;
-  height: 64px;
+
+.div-community-card {
+  box-shadow: 10px 10px 5px  black;
+ border-radius: 15px;
+  border: 2px solid rgb(255, 255, 255); /* Adicione a borda ao contêiner do "card" */
+  display: flex; /* Para alinhar a imagem e o texto lado a lado */
+  align-items: center; /* Para alinhar verticalmente */
+ margin: 10px;
+  text-align: justify;
+  justify-content: space-between;
 }
+
+.main.cards {
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px  black;
+  border: 2px solid rgb(255, 255, 255); /* Adicione a borda ao contêiner do "card" */
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin-block-end: 40px;
+}
+
+.card {
+  flex-grow: 1;
+  flex-basis: 0;
+  border: 2px;
+  border-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza conteúdo verticalmente */
+  text-align: center; /* Centraliza texto horizontalmente */
+}
+
+.card img {
+  max-width: 100%; /* Certifica-se de que a imagem não ultrapasse a largura do card */
+  margin-top: 10px; /* Adiciona margem acima da imagem */
+}
+
+.h3-community {
+  text-align: center;
+}
+
+.paragrafo-card {
+  text-align: center;
+  font-size: 25px;
+}       

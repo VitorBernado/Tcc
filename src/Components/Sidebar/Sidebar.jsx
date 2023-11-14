@@ -15,7 +15,7 @@ import ListButton from "../ListButtom/ListButton";
 import { useState } from "react";
 
 const Sidebar = () => {
-  const userImg = "./Perfil.jpeg";
+  const userImg = "Perfil.png";
   const [isActiveMenu, setiSActiveMenu] = useState(false);
 
   const ActiveMenu = () => {
@@ -35,7 +35,7 @@ const Sidebar = () => {
         <div className="avatar">
           <Avatar
             image={userImg}
-            name={"Thifany"}
+            name={"Prime Racing"}
             width="115px"
             height="115px"
           />
@@ -45,16 +45,20 @@ const Sidebar = () => {
             <ListButton router={"/"} icon={<GoHome />} title={"Home"} />
           </li>
           <li>
-            <ListButton router={"/Account"} icon={<BiUser />} title={"Conta"} />
+            <ListButton
+              router={"/Account"}
+              icon={<BiUser />}
+              title={"Perfil"}
+            />
           </li>
           <li>
             <ListButton router={""} icon={<GoTrophy />} title={"Ranking"} />
           </li>
           <li>
             <ListButton
-              router={""}
+              router={"/jogos"}
               icon={<PiUsersThree />}
-              title={"Comunidade"}
+              title={"Jogos"}
             />
           </li>
           <li>
