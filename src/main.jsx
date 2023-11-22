@@ -13,6 +13,7 @@ import Game from "./Routes/SecretWord/Game";
 import StartGame from "./Routes/SecretWord/StartGame";
 import GameOver from "./Routes/SecretWord/GameOver";
 import Community from "./Routes/Community/Community";
+import Ranking from "./Routes/Ranking/Ranking";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "Jogos",
     element: <Home />,
+  },
+  {
+    path: "Ranking",
+    element: <Ranking />,
   },
 ]);
 

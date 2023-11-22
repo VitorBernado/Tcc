@@ -75,7 +75,7 @@ export default function Community() {
 
       <div className="div-community">
         <div className="div-community-card">
-          <a
+          <a className="img-container"
             width="100"
             height="100"
             href="https://www.sescrio.org.br/wp-content/uploads/2020/06/Est%C3%ADmulo-Cognitivo-Volume-1.pdf"
@@ -83,7 +83,7 @@ export default function Community() {
             {" "}
             <img className="img-container" src="Cartilha.png" alt="" />
           </a>
-          <p className="paragrafo-community">
+          <p className="paragrafo-community-text">
             O desenvolvimento deste site/app fundamentou-se na cartilha de
             exercícios de estímulos cognitivos do SESC/RJ, o qual, através de
             pesquisas de campo, artigos científicos e artigos acadêmicos, buscou
@@ -98,8 +98,6 @@ export default function Community() {
         <div className="div-community-card">
           <div className="img-community">
             <img
-              width="350"
-              height="300"
               className="img"
               src="idosos2.jpg"
               alt=""
@@ -122,7 +120,7 @@ export default function Community() {
               width="350"
               height="300"
               className="img"
-              src="idosos4.avif"
+              src="idosos3.jpg"
               alt=""
             />
           </div>
@@ -140,7 +138,7 @@ export default function Community() {
 
       <main className="main cards">
         <section className="card">
-          <img
+          <img  height="250"
             className="img-container-card"
             src="albert.png"
             alt="Foto deArbert"
@@ -152,7 +150,8 @@ export default function Community() {
         </section>
 
         <section className="card">
-          <img
+          <img  height="250"
+        
             className="img-container-card"
             src="augusto.png"
             alt="Foto de Augusto"
@@ -164,6 +163,14 @@ export default function Community() {
           </p>
         </section>
       </main>
+
+      <footer className="footer-community">
+        <div className="footer-content-community">
+          <div className="footer-info">
+            <p>&copy; 2023 Atividades Conitivas. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

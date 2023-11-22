@@ -52,7 +52,11 @@ const Sidebar = () => {
             />
           </li>
           <li>
-            <ListButton router={""} icon={<GoTrophy />} title={"Ranking"} />
+            <ListButton
+              router={"/Ranking"}
+              icon={<GoTrophy />}
+              title={"Ranking"}
+            />
           </li>
           <li>
             <ListButton

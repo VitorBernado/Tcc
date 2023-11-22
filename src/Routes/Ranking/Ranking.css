@@ -1,0 +1,10 @@
+.container-ranking {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    .container-ranking {
+        flex-direction: column;
+    }
+}

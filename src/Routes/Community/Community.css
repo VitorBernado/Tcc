@@ -1,97 +1,137 @@
 
-
-.video-container {
-  margin: 20px;
-  text-align: center;
-  align-items: center;
-}
 .img-community {
   margin: 30px;
   text-align: center;
   align-items: center;
 }
-.img-container{
+/************************header*************************/
+.community-container {
+  max-width: 90%; /* Defina uma largura máxima para o container principal */
+  margin: 0 auto; /* Centralize o container na tela */
+  padding: 20px; /* Adicione algum preenchimento ao redor do conteúdo */
+}
+
+.community-header {
+  display: flex;
+  align-items: center;
+}
+
+.img-container-card {
+  width: 90%; /* Defina a largura da imagem como uma porcentagem da largura do container */
+}
+
+.community-header-title {
+  text-align: center;
+  font-size: 30px;
+  flex: 1; /* Faça o título ocupar o restante do espaço disponível */
+
+}
+
+.paragrafo-community-header {
+  font-size: 25px;
+  margin-top: 10px; /* Adicione um espaçamento superior para separar o título do parágrafo */
+}
+
+.btn-community {
+  
+  width: 100%; /* Faça o botão ocupar a largura total do container */
+  padding: 10px;
+  margin-top: 20px; /* Adicione um espaçamento superior para separar o parágrafo do botão */
+}
+
+/* Adicione uma media query para ajustar o layout em telas menores */
+@media screen and (max-width: 600px) {
+  .community-container {
+    margin-left: 5%;
+    padding: 10px; /* Reduza o preenchimento em telas menores */
+  }
+
+  .img-container-card {
+    width: 50%; /* Ajuste a largura da imagem para telas menores, se necessário */
+  }
+}
+/*****************************fim do header*************************************/
+/**********************começo da div commmunity************************/
+.div-community {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center; 
+  margin-left: 80px;
+  margin-right: 90px;
+}
+.img-container {
   align-items: justify;
   margin: 30px;
   height: 300px;
   width: 250px;
 }
-
-.btn-community{
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+.video-container {
+  margin: 20px;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-
-}
-.community-container{
-  background: url('./fundo.png');
-  filter: grayscale(70%);
-  background-size: 100vw ;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  padding: 40px; 
-
 }
 
-.community-header{
+.div-community-card {
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
   display: flex;
-  align-items: center;
-  justify-items: center;
-}
-.community-header-img{
-  margin-top: 30px;
-  margin-left: 5%;
+  align-items: center; /* Center items horizontally */
+  margin: 10px;
+  text-align: justify;
 
 }
-.community-header-title{
-  margin-left: 20%; 
-  font-size: 30px;
-}
-.community-header , .paragrafo-community {
-  margin: 0;
-  padding: 0;
-}
+
 .paragrafo-community {
-  margin-top: 30px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: justify;
-  margin-left: 40px ;
-  margin-inline:40px;
-  border: none;
+  margin: 15px;
+  flex: 1;
 }
-.paragrafo-community-header{
-  font-size: 30px;
-  text-align: justify;
-  margin-left: 40px ;
-  margin-inline:40px;
-}
+
 .paragrafo-community-text {
   font-size: 25px;
   text-align: justify;
   margin: 15px;
+  flex: 1;
+}
+.img-container{
+  width: 250px;
+  height: 300px;
+}
+.img-community img {
+  margin: 10px;
+  width: 250px;
+  height: 300px;
+  margin-right: 20px; /* Adjust margin as needed */
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 800px) {
+  .div-community-card  {
+    display: flex ;
+    flex-direction: column; 
+    align-items: column;
+    width: 70%;
+  }
 
-.div-community {
-  margin-top: 15PX;
-  display: flex;
-  justify-content: center; 
-  margin-left:80px;
-  margin-right: 90px;
+  .img-community img {
+    margin: 0; 
+    margin-bottom: 10px; 
+    width: 100%;
+  }
+  .video-container{
+    width: 10%;
+    width: 25px;
+    height: 30%;
+  }
+  .img-container{
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
-.div-community-card {
-  box-shadow: 10px 10px 5px  black;
- border-radius: 15px;
-  border: 2px solid rgb(255, 255, 255); /* Adicione a borda ao contêiner do "card" */
-  display: flex; /* Para alinhar a imagem e o texto lado a lado */
-  align-items: center; /* Para alinhar verticalmente */
- margin: 10px;
-  text-align: justify;
-  justify-content: space-between;
-}
-
+/********************termino da div - community***************************/
 .main.cards {
   border-radius: 15px;
   box-shadow: 10px 10px 5px  black;
@@ -127,3 +167,28 @@
   text-align: center;
   font-size: 25px;
 }       
+
+/************************começo da footer***********************/
+.footer-community {
+  color: #fff; 
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-content-community {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@media (max-width: 600px) {
+  .footer-content {
+    text-align: center;
+  }
+}
+.margin-community{
+  margin: 55px;
+}
+/*******************************termino da footer***********************************/

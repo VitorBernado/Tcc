@@ -12,10 +12,10 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const checkboxRef = useRef();
   const [formData, setFormData] = useState({
-    nome: "",
+    name: "",
     email: "",
-    telefone: "",
-    senha: "",
+    phone: "",
+    password: "",
   });
 
   const handleInputChange = (e) => {
@@ -36,7 +36,7 @@ const Register = () => {
     if (checkboxRef.current.checked) {
       // Aqui você pode fazer a solicitação para a API
       // Certifique-se de substituir 'sua_api_endpoint' pela URL da sua APIo
-      fetch(" http://localhost:8080/Register", {
+      fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,31 +68,27 @@ const Register = () => {
 
       <input
         type="text"
-        name="nome"
+        name="name"
         placeholder="Nome"
-        value={formData.nome}
         onChange={handleInputChange}
       />
       <input
         type="email"
         name="email"
         placeholder="E-mail"
-        value={formData.email}
         onChange={handleInputChange}
       />
       <input
         type="text"
-        name="telefone"
+        name="phone"
         placeholder="Telefone"
-        value={formData.telefone}
         onChange={handleInputChange}
       />
       <div className="container-password">
         <input
           type={showPassword ? "text" : "password"}
-          name="senha"
+          name="password"
           placeholder="Senha"
-          value={formData.senha}
           onChange={handleInputChange}
           className="password"
         />
@@ -102,12 +98,7 @@ const Register = () => {
       </div>
       <div className="container-termos">
         <label className="checkbox-container">
-          <input
-            type="checkbox"
-            name="aceitarTermos"
-            ref={checkboxRef}
-            onChange={handleInputChange}
-          />
+          <input type="checkbox" name="aceitarTermos" ref={checkboxRef} />
           <span className="checkmark"></span>
           <p>
             Eu aceito os <span>Termos de uso</span> e{" "}
