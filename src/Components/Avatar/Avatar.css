@@ -15,4 +15,5 @@
 .container-avatar h2 {
     font-size: 1.3em;
     font-weight: bold;
+    text-transform: capitalize;
 }

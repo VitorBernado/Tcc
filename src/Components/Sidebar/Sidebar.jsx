@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // React
 import { GoHome, GoTrophy } from "react-icons/go";
 import { BiUser } from "react-icons/bi";
@@ -14,8 +15,7 @@ import Avatar from "../Avatar/Avatar";
 import ListButton from "../ListButtom/ListButton";
 import { useState } from "react";
 
-const Sidebar = () => {
-  const userImg = "Perfil.png";
+const Sidebar = ({ userImg, name }) => {
   const [isActiveMenu, setiSActiveMenu] = useState(false);
 
   const ActiveMenu = () => {
@@ -33,12 +33,7 @@ const Sidebar = () => {
         className={isActiveMenu ? "container-menu-active" : "container-menu"}
       >
         <div className="avatar">
-          <Avatar
-            image={userImg}
-            name={"Prime Racing"}
-            width="115px"
-            height="115px"
-          />
+          <Avatar image={userImg} name={name} width="115px" height="115px" />
         </div>
         <ul className="list-menu">
           <li>

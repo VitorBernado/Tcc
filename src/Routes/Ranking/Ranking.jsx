@@ -46,9 +46,13 @@ const data = [
 ];
 
 const Ranking = () => {
+  const session = JSON.parse(localStorage.getItem("user"));
   return (
     <div className="container-ranking">
-      <Sidebar />
+      <Sidebar
+        userImg={`http://localhost:3000/file/${session.file}`}
+        name={session.user.name}
+      />
       <TableRanking data={data} className="table" />
     </div>
   );

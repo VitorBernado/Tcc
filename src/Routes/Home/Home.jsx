@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const session = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
     fetch("http://localhost:5173/Games.json")
@@ -20,7 +21,10 @@ const Home = () => {
   return (
     <div className="container-page">
       <header>
-        <Sidebar />
+        <Sidebar
+          userImg={`http://localhost:3000/file/${session.file}`}
+          name={session.user.name}
+        />
       </header>
       <main>
         <Carrossel data={data} title={"Em Alta"} />

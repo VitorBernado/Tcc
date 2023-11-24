@@ -49,9 +49,11 @@ const Login = () => {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => {
-        if (response.ok) {
+      .then((response) => response.json())
+      .then((json) => {
+        if (json.token) {
           window.location.href = "/jogos";
+          localStorage.setItem("user", JSON.stringify(json));
         } else {
           setError("Credenciais inválidas. Tente novamente.");
         }
